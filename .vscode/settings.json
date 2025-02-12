@@ -1,0 +1,21 @@
+{
+    "stylelint.enable": true,
+    "css.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": ["css", "scss", "svelte"],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit"
+    },
+    "eslint.validate": ["javascript", "typescript", "svelte"],
+    "[javascript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.labelFormat": "medium",
+    "[svelte]": {
+      "editor.defaultFormatter": "svelte.svelte-vscode"
+    }
+  }
