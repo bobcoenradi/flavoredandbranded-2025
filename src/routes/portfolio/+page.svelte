@@ -95,7 +95,7 @@
     li {
       padding: 0.3rem 0;
       list-style: none;
-      color: $black;
+      color: $purple;
       width: fit-content;
       visibility: hidden;
       &.intersecting {

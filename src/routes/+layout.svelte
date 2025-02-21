@@ -1,37 +1,46 @@
-<script>
+<script lang="ts">
   import './../scss/app.scss';
   import Footer from '$lib/components/Footer.svelte';
   import Header from '$lib/components/Header.svelte';
   import { onMount } from 'svelte';
-  import Lenis from 'lenis'; // Ensure the import is correct
+  // Instantiate GSAP
+  import { gsap, ScrollSmoother, ScrollTrigger } from '$lib/scripts/gsap';
 
-  let lenis;
+  import { page } from '$app/stores';
 
-  onMount(() => {
-    lenis = new Lenis();
+  let smoother: ScrollSmoother;
 
-    // console.log('Lenis initialized');
+  let gsapElement: HTMLElement | null = null;
 
-    // lenis.on('scroll', (e) => {
-    //   console.log(e);
-    // });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+  function updateTheme(path) {
+    if (typeof document !== 'undefined') {
+      document.body.setAttribute('data-theme', path);
     }
+  }
+  onMount(() => {
+    updateTheme($page.url.pathname);
 
-    requestAnimationFrame(raf);
+    if (gsapElement) {
+      gsap.set(gsapElement, {});
+    }
+    smoother = ScrollSmoother.create({
+      smooth: 1,
+      effects: false,
+    });
   });
+
+  $: updateTheme($page.url.pathname);
 </script>
 
-<div id="content-loaded" class=""></div>
 <Header />
 
-<div class="container">
-  <main>
-    <slot />
-  </main>
+<div id="smooth-wrapper">
+  <div id="smooth-content">
+    <div class="container">
+      <main>
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </div>
 </div>
-
-<Footer />

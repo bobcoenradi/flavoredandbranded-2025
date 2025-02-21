@@ -307,7 +307,7 @@
           padding: 0.5rem 0;
           a {
             text-decoration: none;
-            color: $black;
+            color: $purple;
             font-weight: 100;
             &:hover {
               text-decoration: underline;
@@ -370,7 +370,7 @@
     width: 100%;
     button {
       text-decoration: none;
-      color: $black;
+      color: $purple;
       font-weight: 100;
       padding: 0;
       font-size: 2rem;
@@ -385,7 +385,7 @@
         position: absolute;
         width: 100%;
         height: 1px;
-        background: $black;
+        background: $purple;
         bottom: -2px;
         left: 0;
         transform: scaleX(0);
