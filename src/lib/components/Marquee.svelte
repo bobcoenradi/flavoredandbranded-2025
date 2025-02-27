@@ -153,7 +153,7 @@
       paddingRight,
     });
 
-    marqueeContainer.addEventListener('pointerenter', pauseLoop);
+    marqueeContainer.addEventListener('pointerenter', playLoop);
     marqueeContainer.addEventListener('pointerleave', playLoop);
     window.addEventListener('wheel', handleScroll);
 

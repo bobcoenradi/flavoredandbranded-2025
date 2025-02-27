@@ -1,9 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { onDestroy } from 'svelte';
   import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
   import Glide from '@glidejs/glide';
   import '@glidejs/glide/dist/css/glide.core.min.css';
   import '@glidejs/glide/dist/css/glide.theme.min.css';
@@ -38,36 +36,11 @@
       dragThreshold: 1,
       autoplay: 6000,
     }).mount();
-
-    gsap.utils.toArray<HTMLElement>('section.trigger').forEach(function (elem) {
-      ScrollTrigger.create({
-        trigger: elem,
-        start: 'top 95%',
-        end: 'bottom 5%',
-        scrub: true,
-        markers: true,
-        onEnter: () => {
-          elem.classList.add('active'); // Add class for scaling effect
-        },
-
-        onLeave: () => {
-          elem.classList.remove('active'); // Add class for scaling effect
-        },
-        onEnterBack: () => {
-          elem.classList.add('active'); // Add class for scaling effect
-        },
-
-        onLeaveBack: () => {
-          elem.classList.remove('active'); // Add class for scaling effect
-        },
-      });
-    });
   });
-  onDestroy(() => {});
 </script>
 
 <svelte:head>
-  <title>flavoredandbranded</title>
+  <title>Flavored and Branded</title>
   <meta name="description" content="" />
 </svelte:head>
 

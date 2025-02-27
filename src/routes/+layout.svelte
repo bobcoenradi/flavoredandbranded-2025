@@ -26,7 +26,7 @@
         start: 'top 95%',
         end: 'bottom 5%',
         scrub: true,
-        markers: true,
+        markers: false,
         onEnter: () => elem.classList.add('active'),
         // onLeave: () => elem.classList.remove('active'),
         // onEnterBack: () => elem.classList.add('active'),

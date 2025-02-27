@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <title>flavoredandbranded</title>
+  <title>Flavored and Branded</title>
   <meta name="description" content="" />
 </svelte:head>
 
