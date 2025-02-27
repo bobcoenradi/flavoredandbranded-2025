@@ -78,6 +78,9 @@
       justify-content: space-between;
       padding-top: 6rem;
       position: relative;
+      @include small {
+        flex-direction: column;
+      }
       .lottie {
         position: absolute;
         top: -2px;
@@ -116,6 +119,9 @@
         align-items: center;
         max-width: 500px;
         position: relative;
+        @include small {
+          font-size: 3rem;
+        }
       }
       h3 {
         font-size: 2rem;
@@ -188,6 +194,11 @@
       display: flex;
       justify-content: space-between;
       max-width: 1280px;
+      gap: 1rem;
+      @include small {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       p {
         color: white;
         font-size: 0.8rem;

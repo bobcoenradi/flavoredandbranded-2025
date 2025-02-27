@@ -106,10 +106,11 @@
   #header {
     top: 0;
     // mix-blend-mode: exclusion;
-    position: relative;
-    padding: 1rem 1rem;
+    position: absolute;
+    padding: 1rem 2rem 1rem 1rem;
     z-index: 1000;
     height: 120px;
+    width: 100%;
     align-items: center;
 
     .inner {
@@ -174,7 +175,7 @@
       position: absolute;
       height: 2px;
       width: 50%;
-      background: $purple;
+      background: white;
       opacity: 1;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -320,6 +321,7 @@
           @include small {
             font-size: 1.5rem;
             color: white;
+            font-weight: 400;
           }
 
           text-decoration: none;
@@ -398,11 +400,24 @@
   :global(body[data-theme^='/portfolio']) {
     #main-navigation ul.main-menu li a {
       color: $purple;
+      @include small {
+        color: white;
+      }
     }
     h1.logo {
       path,
       text {
         fill: $purple !important;
+      }
+    }
+    #nav-icon {
+      span {
+        background-color: $purple;
+      }
+      &.open {
+        span {
+          background-color: white;
+        }
       }
     }
   }

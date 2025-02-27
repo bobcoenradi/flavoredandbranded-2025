@@ -55,7 +55,6 @@
     <div class="column">
       <div class="info">
         <h1>Contact</h1>
-        <p>Contact us</p>
         <ul>
           <li>
             <a href="https://www.linkedin.com/in/sjo-baggen-2b131626/">LinkedIn</a>
@@ -66,12 +65,15 @@
           <li class="">
             <a href="tel:+31615058040">+31 (0)6 15058040</a>
           </li>
+          <li>
+            <p>Hellingbaan 424 Amsterdam</p>
+          </li>
         </ul>
       </div>
     </div>
     <div class="column">
       <form class="form" on:submit={submitForm}>
-        <h2>Copntact formulier</h2>
+        <h2>Contact form</h2>
         <div class="form-control two-controls">
           <div class="first">
             <label for="firstName">
@@ -140,11 +142,12 @@
   @import 'src/scss/app.scss'; // Adjust the path as necessary
 
   section {
+    padding-top: 10rem;
     .inner {
       display: flex;
       max-width: 1280px;
       margin: 0 auto;
-      padding: 5rem 1rem;
+      padding: 5rem 2rem;
       gap: 2rem;
 
       @include mobile {
@@ -178,16 +181,33 @@
       }
     }
   }
+
+  .info {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 0.5rem;
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
   .form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
     background: white;
-    // @include mobile {
-    //   margin-left: 0;
-    // }
+    @include mobile {
+      padding: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
     .form-control {
       margin: 15px 0px;
       &.two-controls {
@@ -237,16 +257,23 @@
       }
 
       button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
+        text-align: center;
+        color: $purple;
+        margin: 0 auto;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid $purple;
+        text-decoration: none;
+        transition: 300ms ease-in-out background-color;
+        font-weight: 600;
+        font-size: 1.3rem;
         width: 100%;
-        height: 40px;
-        border: 0;
-        background: $purple;
-        color: $white;
-        text-transform: uppercase;
-        appearance: none;
+        &:hover {
+          background: darken($purple, 10%);
+          color: white;
+        }
       }
 
       :global(button:disabled) {

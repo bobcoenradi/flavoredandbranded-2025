@@ -78,12 +78,13 @@
     max-width: 720px;
     margin: 0 auto;
     @include small {
+      padding-top: 50px;
       justify-content: flex-start;
     }
   }
 
   .page-title {
-    font-weight: 100;
+    font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -112,7 +113,7 @@
       a {
         text-decoration: none;
         font-size: 3rem;
-        font-weight: 100;
+        font-weight: 600;
         color: inherit;
         display: inline-block;
         opacity: 0;
@@ -127,7 +128,7 @@
         }
         span {
           font-size: 1rem;
-          font-weight: 100;
+          font-weight: 400;
           @include small {
             display: none;
           }

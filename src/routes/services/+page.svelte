@@ -1,35 +1,15 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+  import Cooking from '$lib/components/Cooking.svelte';
+  import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
+
+  let isClient = false;
+
   //   export let data;
 
   onMount(() => {
+    isClient = true;
     // console.log(data);
-
-    gsap.utils.toArray<HTMLElement>('section.trigger').forEach(function (elem) {
-      ScrollTrigger.create({
-        trigger: elem,
-        start: 'top 90%',
-        end: 'bottom 10%',
-        scrub: true,
-        markers: true,
-        onEnter: () => {
-          elem.classList.add('active'); // Add class for scaling effect
-        },
-
-        onLeave: () => {
-          elem.classList.remove('active'); // Add class for scaling effect
-        },
-        onEnterBack: () => {
-          elem.classList.add('active'); // Add class for scaling effect
-        },
-
-        onLeaveBack: () => {
-          elem.classList.remove('active'); // Add class for scaling effect
-        },
-      });
-    });
   });
 </script>
 
@@ -45,10 +25,24 @@
         Whether you're looking for a journey from scratch to craft, or just a little extra spice.
         Expanding into a culinary empire, or simply adding the finishing touch. We got you!
       </h1>
+      {#if isClient}
+        <div class="lottie drip">
+          <LottiePlayer
+            src="/lottie/druppel.json"
+            autoplay={true}
+            loop={true}
+            controls={false}
+            renderer="svg"
+            background="transparent"
+            height={90}
+            width={270}
+            controlsLayout />
+        </div>
+      {/if}
     </div>
   </section>
 
-  <section class="even trigger">
+  <section class="even drip trigger">
     <div class="inner">
       <div class="block">
         <h2>Concepting</h2>
@@ -73,14 +67,39 @@
           <span>Brand Value</span>
         </div>
       </div>
-      <div class="block">
-        <img src="/img/branding.png" alt="Branding" />
+      <div class="block with-image">
+        {#if isClient}
+          <div class="lottie">
+            <LottiePlayer
+              src="/lottie/mes.json"
+              autoplay={true}
+              loop={true}
+              controls={false}
+              renderer="svg"
+              background="transparent"
+              controlsLayout />
+          </div>
+        {/if}
       </div>
     </div>
   </section>
 
   <section class="even purple trigger">
     <div class="inner">
+      <div class="block with-image">
+        {#if isClient}
+          <div class="lottie">
+            <LottiePlayer
+              src="/lottie/pan.json"
+              autoplay={true}
+              loop={true}
+              controls={false}
+              renderer="svg"
+              background="transparent"
+              controlsLayout />
+          </div>
+        {/if}
+      </div>
       <div class="block">
         <h2>Branding</h2>
         <p>
@@ -101,9 +120,6 @@
           <span>The Motto</span>
           <span>Brand Value</span>
         </div>
-      </div>
-      <div class="block">
-        <img src="/img/branding.png" alt="Branding" />
       </div>
     </div>
   </section>
@@ -132,14 +148,39 @@
           <span>Brand Value</span>
         </div>
       </div>
-      <div class="block">
-        <img src="/img/branding.png" alt="Branding" />
+      <div class="block with-image">
+        {#if isClient}
+          <div class="lottie">
+            <LottiePlayer
+              src="/lottie/pepermolen.json"
+              autoplay={true}
+              loop={true}
+              controls={false}
+              renderer="svg"
+              background="transparent"
+              controlsLayout />
+          </div>
+        {/if}
       </div>
     </div>
   </section>
 
   <section class="even purple trigger">
     <div class="inner">
+      <div class="block with-image">
+        {#if isClient}
+          <div class="lottie">
+            <LottiePlayer
+              src="/lottie/taart.json"
+              autoplay={true}
+              loop={true}
+              controls={false}
+              renderer="svg"
+              background="transparent"
+              controlsLayout />
+          </div>
+        {/if}
+      </div>
       <div class="block">
         <h2>After Care</h2>
         <p>Think of it as the dessert, the cherry on top—essential to complete the experience.</p>
@@ -157,20 +198,10 @@
           <span>Brand Value</span>
         </div>
       </div>
-      <div class="block">
-        <img src="/img/branding.png" alt="Branding" />
-      </div>
     </div>
   </section>
 
-  <section class="cooking" data-color="#fff">
-    <div class="inner">
-      <div class="block"><img src="/img/pan.png" alt="Cooking" /></div>
-      <div class="block">
-        <h2>Tap the lid to see the flavors we've cooked</h2>
-      </div>
-    </div>
-  </section>
+  <Cooking />
 </div>
 
 <style lang="scss">
@@ -225,11 +256,12 @@
     flex-direction: column;
     justify-content: center;
 
-    min-height: calc(100vh - 200px);
-
     margin: 0 auto;
     align-items: center;
     background: $purple;
+    @include mobile {
+      padding-top: 100px;
+    }
 
     .inner {
       max-width: 1280px;
@@ -239,6 +271,22 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      min-height: calc(100vh - 200px);
+      justify-content: center;
+      position: relative;
+      @include small {
+        padding: 0 2rem;
+      }
+
+      > .drip {
+        position: absolute;
+        bottom: -89px;
+        left: 0;
+        transform: scaleY(0);
+        transition: all 1000ms ease-in-out;
+        transform-origin: top center;
+        transition-delay: 2500ms;
+      }
     }
 
     h1 {
@@ -248,6 +296,7 @@
       opacity: 0;
       transform: scale(0.7);
       transition: all 1000ms ease-in-out;
+
       color: white;
       @media screen and (max-width: 768px) {
         font-size: 2rem;
@@ -266,6 +315,10 @@
         opacity: 1 !important;
         transform: scale(1) !important;
       }
+
+      :global(.drip) {
+        transform: scaleY(1) !important;
+      }
     }
     p {
       text-align: center;
@@ -282,66 +335,25 @@
     }
   }
 
-  .cooking {
-    min-height: 100vh;
-    padding: 5rem 0;
-    .inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-
-      .block {
-        flex: 1;
-        display: flex;
-        align-items: center;
-      }
-      h2 {
-        font-size: 4rem;
-        color: $purple;
-        max-width: 500px;
-      }
-      img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 1rem;
-      }
-    }
-  }
-
   section.even {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 0;
 
     .inner {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 10rem 1rem;
       display: flex;
       align-items: center;
       gap: 1rem;
       transform: scale(0.9);
       opacity: 0;
       transition: all 1000ms ease-in-out;
-    }
-
-    .tags {
-      display: flex;
-      gap: 0.5rem;
-      span {
-        color: white;
-        text-wrap-mode: nowrap;
-        font-weight: 400;
-        background-color: $purple;
-        display: flex;
-        height: 25px;
-        align-items: center;
-        padding: 0 0.5rem;
-        border-radius: 5px;
-        font-size: 0.85rem;
+      @include small {
+        flex-direction: column;
+        padding: 5rem 2rem;
       }
     }
 
@@ -357,11 +369,36 @@
       align-items: flex-start;
       gap: 1rem;
       flex: 1;
+      order: 0;
+
+      &.with-image {
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+          order: 99;
+        }
+      }
       img {
         width: 100%;
         max-width: 600px;
         height: auto;
         border-radius: 1rem;
+        &.sjo {
+          max-width: 400px;
+          border-radius: 0;
+          transform: rotate(3deg);
+        }
+      }
+      :global(.lottie) {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        :global(.lottie-player) {
+          height: auto;
+          max-width: 270px;
+        }
       }
     }
     h2 {
@@ -369,6 +406,9 @@
       color: $purple;
       max-width: 500px;
       text-align: left;
+      @include mobile {
+        font-size: 3rem;
+      }
     }
     &.purple {
       background: $purple;
@@ -376,11 +416,8 @@
       h2 {
         color: white;
       }
-      .tags {
-        span {
-          background: white;
-          color: $purple;
-        }
+      p {
+        color: white;
       }
     }
   }

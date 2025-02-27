@@ -243,19 +243,23 @@
     }
   }
   .portfolio-title {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 2rem 2rem 2rem;
+    position: relative;
     .inner {
       text-align: center;
       padding-bottom: 8rem;
     }
     .title {
       font-size: 4rem;
-      font-weight: 100;
+      font-weight: 600;
       margin-bottom: 1rem;
+      @include mobile {
+        font-size: 3rem;
+      }
     }
   }
   .portfolio-details {
@@ -276,8 +280,9 @@
     }
     h2 {
       font-size: 2rem;
-      font-weight: 100;
+      font-weight: 600;
       margin-bottom: 1rem;
+      color: $purple;
     }
     .description {
       max-width: 500px;
@@ -286,6 +291,7 @@
         font-size: 1rem;
         font-weight: 100;
         line-height: 1.5rem;
+        color: $black;
       }
     }
     .services {
@@ -293,8 +299,9 @@
         list-style: none;
         li {
           font-size: 1rem;
-          font-weight: 100;
+          font-weight: 400;
           padding: 0.5rem 0;
+          color: $black;
         }
       }
     }
@@ -303,12 +310,13 @@
         list-style: none;
         li {
           font-size: 1rem;
-          font-weight: 100;
+          font-weight: 400;
           padding: 0.5rem 0;
+          color: $black;
           a {
             text-decoration: none;
             color: $purple;
-            font-weight: 100;
+            font-weight: 400;
             &:hover {
               text-decoration: underline;
             }
@@ -371,7 +379,7 @@
     button {
       text-decoration: none;
       color: $purple;
-      font-weight: 100;
+      font-weight: 600;
       padding: 0;
       font-size: 2rem;
       border: none;

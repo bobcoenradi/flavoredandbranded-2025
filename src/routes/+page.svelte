@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { onDestroy } from 'svelte';
   import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -7,24 +8,23 @@
   import '@glidejs/glide/dist/css/glide.core.min.css';
   import '@glidejs/glide/dist/css/glide.theme.min.css';
 
+  import Cooking from '$lib/components/Cooking.svelte';
+
   import Marquee from '$lib/components/Marquee.svelte';
 
   let isClient = false;
 
   let element;
 
-  export let data;
-
   onMount(() => {
-    console.log('onMount');
-    console.log(data);
     isClient = true;
 
     new Glide('.glide', {
       type: 'carousel',
-      focusAt: 'left',
+      focusAt: '1',
       gap: '1rem',
       hoverpause: true,
+      autoplay: 2000,
       animationDuration: 600,
       animationTimingFunc: 'ease-out',
       perView: 9,
@@ -42,8 +42,8 @@
     gsap.utils.toArray<HTMLElement>('section.trigger').forEach(function (elem) {
       ScrollTrigger.create({
         trigger: elem,
-        start: 'top 80%',
-        end: 'bottom 20%',
+        start: 'top 95%',
+        end: 'bottom 5%',
         scrub: true,
         markers: true,
         onEnter: () => {
@@ -63,6 +63,7 @@
       });
     });
   });
+  onDestroy(() => {});
 </script>
 
 <svelte:head>
@@ -247,14 +248,7 @@
       <a href="/services" class="cta">Services</a>
     </div>
   </section>
-  <section class="cooking" data-color="#fff">
-    <div class="inner">
-      <div class="block"><img src="/img/pan.png" alt="Cooking" /></div>
-      <div class="block">
-        <h2>Tap the lid to see the flavors we've cooked</h2>
-      </div>
-    </div>
-  </section>
+  <Cooking />
 </div>
 
 <style lang="scss">
@@ -355,7 +349,12 @@
       transform: scale(0.7);
       transition: all 1000ms ease-in-out;
       @media screen and (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 2.5rem;
+      }
+      span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       :global(div:not(.word)) {
         display: inline-block;
@@ -365,6 +364,7 @@
         @media screen and (max-width: 768px) {
           max-width: 240px;
           max-height: 75px;
+          transform: translateY(-3px);
         }
       }
     }
@@ -506,35 +506,7 @@
     }
   }
 
-  .cooking {
-    min-height: 100vh;
-    padding: 5rem 0;
-    .inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-
-      .block {
-        flex: 1;
-        display: flex;
-        align-items: center;
-      }
-      h2 {
-        font-size: 4rem;
-        color: $purple;
-        max-width: 500px;
-      }
-      img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 1rem;
-      }
-    }
-  }
   .specialties {
-    min-height: 100vh;
     .inner {
       max-width: 1280px;
       margin: 0 auto;
