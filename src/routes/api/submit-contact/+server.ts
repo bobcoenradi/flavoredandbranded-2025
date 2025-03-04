@@ -63,9 +63,9 @@ export async function POST({ request }: { request: Request }) {
 
     await transporter.sendMail({
       from: '"Flavored and Branded Contact" <bobcoenradi@gmail.com>',
-      to: 'bobcoenradi@gmail.com',
+      to: 'hello@flavoredandbranded.com',
       replyTo: email,
-      subject: reason + ' van ' + firstName + ' ' + lastName,
+      subject: 'Contact van ' + firstName + ' ' + lastName,
       html: `
         <p><strong>Naam:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>

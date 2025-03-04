@@ -38,16 +38,16 @@
     <div class="right">
       <ul>
         <li>
-          <a href="mailto:hello@flavoredandbranded.com">Email</a>
+          <a href="mailto:hello@flavoredandbranded.com" target="_blank">Email</a>
         </li>
         <li>
-          <a href="tel:+31615058040">Phone</a>
+          <a href="tel:+31615058040" target="_blank">Phone</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/sjo-baggen-2b131626/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sjo-baggen-2b131626/" target="_blank">LinkedIn</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/sjo-baggen-2b131626/">Instagram</a>
+          <a href="https://www.instagram.com/flavoredandbranded/" target="_blank">Instagram</a>
         </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
   <div class="copyright">
     <a href="/terms-and-condition">Terms and Conditions</a>
     <img src="/img/flavoredandbranded-white.svg" alt="flavoredandbranded" />
-    <p>Hellingbaan 424 Amsterdam</p>
+    <p></p>
   </div>
 </footer>
 
@@ -85,6 +85,7 @@
         position: absolute;
         top: -2px;
         right: 0;
+        pointer-events: none;
         :global(svg path) {
           fill: white;
         }
@@ -159,9 +160,9 @@
               content: '';
               position: absolute;
               width: 100%;
-              height: 1px;
+              height: 4px;
               background: white;
-              bottom: -2px;
+              bottom: 2px;
               left: 0;
               transform: scaleX(0);
               transform-origin: left;
@@ -190,7 +191,7 @@
       font-weight: 100;
       color: $purple;
       padding: 1rem 0 2rem 0;
-      margin: 2rem auto 0;
+      margin: 8rem auto 0;
       display: flex;
       justify-content: space-between;
       max-width: 1280px;

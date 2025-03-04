@@ -25,6 +25,11 @@
         Whether you're looking for a journey from scratch to craft, or just a little extra spice.
         Expanding into a culinary empire, or simply adding the finishing touch. We got you!
       </h1>
+      <svg viewBox="0 0 68 33" class="chevron-down">
+        <path
+          d="M.58 3.414l27.432 27.433c2.715 2.715 7.167 2.787 9.964.164L67.356 3.46 64.62.54 35.24 28.093c-1.222 1.146-3.212 1.114-4.4-.075L3.408.586.579 3.414z">
+        </path>
+      </svg>
       {#if isClient}
         <div class="lottie drip">
           <LottiePlayer
@@ -71,7 +76,7 @@
         {#if isClient}
           <div class="lottie">
             <LottiePlayer
-              src="/lottie/mes.json"
+              src="/lottie/mes-paars.json"
               autoplay={true}
               loop={true}
               controls={false}
@@ -152,7 +157,7 @@
         {#if isClient}
           <div class="lottie">
             <LottiePlayer
-              src="/lottie/pepermolen.json"
+              src="/lottie/pepermolen-paars.json"
               autoplay={true}
               loop={true}
               controls={false}
@@ -278,6 +283,27 @@
         padding: 0 2rem;
       }
 
+      @keyframes hover-me {
+        100% {
+          transform: translate3d(-50%, 15px, 0);
+        }
+      }
+      .chevron-down {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        animation: hover-me 0.5s infinite ease-in-out alternate;
+        @include mobile {
+          bottom: 30px;
+        }
+        path {
+          fill: white;
+        }
+      }
+
       > .drip {
         position: absolute;
         bottom: -89px;
@@ -370,6 +396,10 @@
       gap: 1rem;
       flex: 1;
       order: 0;
+
+      p {
+        max-width: 600px;
+      }
 
       &.with-image {
         align-items: center;

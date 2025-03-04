@@ -26,6 +26,11 @@
         We are a concept development and branding agency specializing in hospitality and the F&B
         sector. Read more about us and our approach below, and let's rendez-vous!
       </h1>
+      <svg viewBox="0 0 68 33" class="chevron-down">
+        <path
+          d="M.58 3.414l27.432 27.433c2.715 2.715 7.167 2.787 9.964.164L67.356 3.46 64.62.54 35.24 28.093c-1.222 1.146-3.212 1.114-4.4-.075L3.408.586.579 3.414z">
+        </path>
+      </svg>
       {#if isClient}
         <div class="lottie drip">
           <LottiePlayer
@@ -203,6 +208,28 @@
         padding: 0 2rem;
       }
 
+      @keyframes hover-me {
+        100% {
+          transform: translate3d(-50%, 15px, 0);
+        }
+      }
+
+      .chevron-down {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        animation: hover-me 0.5s infinite ease-in-out alternate;
+        @include mobile {
+          bottom: 30px;
+        }
+        path {
+          fill: white;
+        }
+      }
+
       > .drip {
         position: absolute;
         bottom: -89px;
@@ -269,7 +296,7 @@
     .inner {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 10rem 1rem;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -296,6 +323,14 @@
       flex: 1;
       order: 0;
 
+      h2 {
+        width: 100%;
+      }
+
+      p {
+        max-width: 600px;
+      }
+
       &.with-image {
         align-items: center;
         justify-content: center;
@@ -311,7 +346,9 @@
         &.sjo {
           max-width: 400px;
           border-radius: 0;
-          transform: rotate(3deg);
+          transform: rotate(0);
+          //saturate black white
+          filter: grayscale(100%) contrast(0.8);
         }
       }
       :global(.lottie) {

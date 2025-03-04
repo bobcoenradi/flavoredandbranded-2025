@@ -54,11 +54,12 @@
   <div class="inner">
     <div class="column">
       <div class="info">
-        <h1>Contact</h1>
+        <h1>Ready to spice things up? Let's add some flavor together!</h1>
+        <!-- <p>Ready to spice things up? Let's add some flavor together!</p> -->
         <ul>
-          <li>
+          <!-- <li>
             <a href="https://www.linkedin.com/in/sjo-baggen-2b131626/">LinkedIn</a>
-          </li>
+          </li> -->
           <li>
             <a href="mailto:hello@flavoredandbranded.com">hello@flavoredandbranded.com</a>
           </li>
@@ -66,7 +67,7 @@
             <a href="tel:+31615058040">+31 (0)6 15058040</a>
           </li>
           <li>
-            <p>Hellingbaan 424 Amsterdam</p>
+            <!-- <p>Hellingbaan 424 Amsterdam</p>  -->
           </li>
         </ul>
       </div>

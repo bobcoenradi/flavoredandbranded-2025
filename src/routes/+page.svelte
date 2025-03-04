@@ -22,7 +22,7 @@
       focusAt: '1',
       gap: '1rem',
       hoverpause: true,
-      autoplay: 2000,
+      autoplay: 500,
       animationDuration: 600,
       animationTimingFunc: 'ease-out',
       perView: 9,
@@ -30,7 +30,7 @@
         1280: { perView: 7 },
         1024: { perView: 5 },
         768: { perView: 3 },
-        544: { perView: 2 },
+        544: { perView: 3 },
       },
       swipeThreshold: 1,
       dragThreshold: 1,
@@ -65,6 +65,11 @@
         {/if}
       </span>
     </h1>
+    <svg viewBox="0 0 68 33" class="chevron-down">
+      <path
+        d="M.58 3.414l27.432 27.433c2.715 2.715 7.167 2.787 9.964.164L67.356 3.46 64.62.54 35.24 28.093c-1.222 1.146-3.212 1.114-4.4-.075L3.408.586.579 3.414z">
+      </path>
+    </svg>
   </section>
 
   <section class="carousel" data-color="#fff">
@@ -131,7 +136,7 @@
             controlsLayout />
         </div>
       {/if}
-      <h2>Specialties</h2>
+      <h2>Our Specialties</h2>
       <div class="blocks">
         <div class="block">
           {#if isClient}
@@ -148,10 +153,10 @@
                 controlsLayout />
             </div>
           {/if}
-          <h3>Concepts</h3>
+          <h3>Concepting</h3>
           <p>
-            We create unique concepts for your hospitality business. We make sure your guests have
-            an unforgettable experience.
+            It all starts with a story, a concept. Think of it as your mise en place, where we set
+            up every ingredient for a unique experience. It’s the very foundation of your business.
           </p>
         </div>
         <div class="block">
@@ -171,8 +176,8 @@
           {/if}
           <h3>Branding</h3>
           <p>
-            We make sure your brand stands out in the crowd. We create a unique identity that your
-            guests will remember.
+            We cook up all the ingredients to transform your concept into a visual and verbal brand
+            identity. Ready to make some noise and stand out!
           </p>
         </div>
         <div class="block">
@@ -190,10 +195,11 @@
                 controlsLayout />
             </div>
           {/if}
-          <h3>Marketing</h3>
+          <h3>Designing</h3>
           <p>
-            We help you reach your target audience. We create marketing strategies that will help
-            you grow your business.
+            The finishing touch. We translate your branding into all the collateral and print
+            materials you need, making sure it's perfectly implemented in your venue and online
+            channels.
           </p>
         </div>
         <div class="block">
@@ -211,14 +217,15 @@
                 controlsLayout />
             </div>
           {/if}
-          <h3>Consulting</h3>
+          <h3>After Care</h3>
           <p>
-            We offer consulting services to help you grow your business. We help you develop a
-            strategy that will help you reach your goals.
+            Concepts and branding evolve and sometimes need a little maintenance. It’s the cherry on
+            top to do so and maintain the quality of your brand. Audits and analyses ensure the
+            concept and brand grow alongside the environment and results.
           </p>
         </div>
       </div>
-      <a href="/services" class="cta">Services</a>
+      <a href="/services" class="cta">More about our services</a>
     </div>
   </section>
   <Cooking />
@@ -300,8 +307,32 @@
     margin: 0 auto;
     align-items: center;
     background: transparent !important;
+    position: relative;
+
+    @keyframes hover-me {
+      100% {
+        transform: translate3d(-50%, 15px, 0);
+      }
+    }
+
+    .chevron-down {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      animation: hover-me 0.5s infinite ease-in-out alternate;
+      @include mobile {
+        bottom: 30px;
+      }
+      path {
+        fill: $purple;
+      }
+    }
 
     .lottie {
+      height: 90px;
       :global(> div) {
         width: 100% !important;
       }
@@ -414,7 +445,9 @@
 
   .brands {
     background: $purple;
-    padding: 5rem 0;
+    padding: 5rem 0 2rem;
+    margin-top: -400px;
+    padding-top: 300px;
 
     .inner {
       max-width: 1280px;
@@ -472,8 +505,8 @@
       margin-top: 4rem;
 
       h2 {
-        max-width: 910px;
-        margin: 0 auto;
+        max-width: 1060px;
+        margin: 4rem auto;
         display: inline-block;
       }
     }
@@ -499,7 +532,7 @@
         text-align: center;
         font-size: 5rem;
         color: $purple;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         font-family: 'ED Lavonia';
       }
       .blocks {
@@ -526,7 +559,7 @@
             align-items: center;
             justify-content: center;
             :global(svg path) {
-              fill: white;
+              // fill: white;
             }
           }
 
