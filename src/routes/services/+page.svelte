@@ -118,12 +118,12 @@
           guide, ready to make noise and stand out!
         </p>
         <div class="tags">
-          <span>Positioning Statement</span>
-          <span>Concept Description</span>
-          <span>Key Message</span>
-          <span>Tagline</span>
-          <span>The Motto</span>
-          <span>Brand Value</span>
+          <span>Logo</span>
+          <span>Typography</span>
+          <span>Color palette</span>
+          <span>Tone of voice</span>
+          <span>Brand values</span>
+          <span>Illustrations</span>
         </div>
       </div>
     </div>
@@ -145,12 +145,13 @@
           life.
         </p>
         <div class="tags">
-          <span>Positioning Statement</span>
-          <span>Concept Description</span>
-          <span>Key Message</span>
-          <span>Tagline</span>
-          <span>The Motto</span>
-          <span>Brand Value</span>
+          <span>Menu's</span>
+          <span>Website</span>
+          <span>Packaging</span>
+          <span>Merchandise</span>
+          <span>Staff clothing</span>
+          <span>Window signing</span>
+          <span>Social Media Templates</span>
         </div>
       </div>
       <div class="block with-image">
@@ -195,12 +196,10 @@
           adjustments and providing ongoing upkeep.
         </p>
         <div class="tags">
-          <span>Positioning Statement</span>
-          <span>Concept Description</span>
-          <span>Key Message</span>
-          <span>Tagline</span>
-          <span>The Motto</span>
-          <span>Brand Value</span>
+          <span>Brand audits</span>
+          <span>Analyse</span>
+          <span>Campaigns</span>
+          <span>Maintenance</span>
         </div>
       </div>
     </div>
