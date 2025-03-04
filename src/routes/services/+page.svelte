@@ -401,6 +401,22 @@
         max-width: 600px;
       }
 
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.125rem 0.5rem;
+          border: 1px solid $purple;
+          border-radius: 5px;
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+
       &.with-image {
         align-items: center;
         justify-content: center;
@@ -448,6 +464,11 @@
       }
       p {
         color: white;
+      }
+      .tags {
+        span {
+          border-color: white;
+        }
       }
     }
   }
