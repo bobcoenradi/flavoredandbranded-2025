@@ -54,9 +54,8 @@
   </div>
 
   <div class="copyright">
-    <a href="/terms-and-condition">Terms and Conditions</a>
+    <!-- <a href="/terms-and-condition">Terms and Conditions</a> -->
     <img src="/img/flavoredandbranded-white.svg" alt="flavoredandbranded" />
-    <p></p>
   </div>
 </footer>
 
@@ -211,6 +210,7 @@
         width: 100px;
         height: auto;
         max-width: 120px;
+        margin: 0 auto;
       }
     }
   }
