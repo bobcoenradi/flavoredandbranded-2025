@@ -220,8 +220,7 @@
           <h3>After Care</h3>
           <p>
             Concepts and branding evolve and sometimes need a little maintenance. It’s the cherry on
-            top to do so and maintain the quality of your brand. Audits and analyses ensure the
-            concept and brand grow alongside the environment and results.
+            top to do so and maintain the quality of your brand.
           </p>
         </div>
       </div>
@@ -309,6 +308,11 @@
     background: transparent !important;
     position: relative;
 
+    @include small {
+      min-height: 400px;
+      padding-top: 4rem;
+    }
+
     @keyframes hover-me {
       100% {
         transform: translate3d(-50%, 15px, 0);
@@ -392,6 +396,14 @@
       }
     }
   }
+
+  .carousel {
+    :global(.marquee-container) {
+      @include small {
+        padding-bottom: 4rem;
+      }
+    }
+  }
   .marquee-item {
     font-size: calc(32em / 16);
     flex-shrink: 0;
@@ -401,6 +413,10 @@
     z-index: 1;
     padding: 1rem;
     animation: float 6s ease-in-out infinite;
+    @include small {
+      width: 150px;
+      height: 400px;
+    }
 
     &:nth-child(even) {
       animation-delay: 1s;
@@ -448,6 +464,9 @@
     padding: 5rem 0 2rem;
     margin-top: -400px;
     padding-top: 300px;
+    @include small {
+      margin-top: -240px;
+    }
 
     .inner {
       max-width: 1280px;
@@ -534,6 +553,9 @@
         color: $purple;
         margin-bottom: 4rem;
         font-family: 'ED Lavonia';
+        font-weight: 500;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: rgb(111, 0, 253);
       }
       .blocks {
         display: flex;

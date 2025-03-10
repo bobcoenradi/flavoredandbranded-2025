@@ -126,6 +126,9 @@
       h3 {
         font-size: 2rem;
         font-weight: 200;
+        @include small {
+          margin-bottom: 2rem;
+        }
       }
 
       a {
@@ -198,6 +201,7 @@
       @include small {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 4rem;
       }
       p {
         color: white;

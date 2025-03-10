@@ -249,9 +249,12 @@
     align-items: center;
     padding: 0 2rem 2rem 2rem;
     position: relative;
+    @include small {
+      min-height: 100vh;
+    }
     .inner {
       text-align: center;
-      padding-bottom: 8rem;
+      padding-bottom: 0;
     }
     .title {
       font-size: 4rem;
@@ -299,7 +302,7 @@
         list-style: none;
         li {
           font-size: 1rem;
-          font-weight: 400;
+          font-weight: 100;
           padding: 0.5rem 0;
           color: $black;
         }
@@ -310,13 +313,13 @@
         list-style: none;
         li {
           font-size: 1rem;
-          font-weight: 400;
+          font-weight: 100;
           padding: 0.5rem 0;
           color: $black;
           a {
             text-decoration: none;
             color: $purple;
-            font-weight: 400;
+            font-weight: 100;
             &:hover {
               text-decoration: underline;
             }

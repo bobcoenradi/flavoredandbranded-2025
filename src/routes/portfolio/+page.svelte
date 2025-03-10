@@ -90,6 +90,7 @@
   }
 
   ul.work {
+    padding-top: 6rem;
     @include small {
       padding-top: 4rem;
     }

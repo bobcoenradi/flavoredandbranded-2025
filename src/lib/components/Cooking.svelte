@@ -13,6 +13,18 @@
 <style lang="scss">
   @import 'src/scss/app.scss'; // Adjust the path as necessary
 
+  @keyframes float {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 10px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
   .cooking {
     min-height: 100vh;
     padding: 5rem 0;
@@ -44,6 +56,11 @@
         max-width: 600px;
         height: auto;
         border-radius: 1rem;
+        animation: float 3s ease-in-out infinite;
+        position: relative;
+        &:hover {
+          animation: none;
+        }
       }
     }
   }

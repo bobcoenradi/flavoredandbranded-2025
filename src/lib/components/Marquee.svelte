@@ -2,10 +2,10 @@
   import { onMount } from 'svelte';
   import gsap from 'gsap';
 
-  export let speed = 1; // Base speed (higher is faster)
+  export let speed = 0.5; // Base speed (higher is faster)
   export let repeat = -1; // Infinite loop
   export let paddingRight = 20; // Padding between items
-  export let scrollSensitivity = 0.001; // Sensitivity of mouse wheel effect
+  export let scrollSensitivity = 0.0005; // Sensitivity of mouse wheel effect
 
   let marqueeContainer;
   let items;
@@ -29,7 +29,7 @@
       widths = [],
       xPercents = [],
       curIndex = 0,
-      pixelsPerSecond = (config.speed || 1) * 100,
+      pixelsPerSecond = (config.speed || 1) * 50,
       snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1),
       totalWidth,
       curX,

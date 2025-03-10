@@ -10,6 +10,21 @@
   onMount(() => {
     isClient = true;
     // console.log(data);
+
+    let ocean = document.getElementsByClassName('ocean')[0],
+      waveWidth = 10,
+      waveCount = Math.floor(window.innerWidth / waveWidth),
+      docFrag = document.createDocumentFragment();
+
+    for (var i = 0; i < waveCount; i++) {
+      var wave = document.createElement('div');
+      wave.className += ' wave';
+      docFrag.appendChild(wave);
+      wave.style.left = i * waveWidth + 'px';
+      wave.style.webkitAnimationDelay = i / 100 + 's';
+    }
+
+    ocean.appendChild(docFrag);
   });
 </script>
 
@@ -89,7 +104,8 @@
     </div>
   </section>
 
-  <section class="even purple trigger">
+  <section class="even purple ocean-wrapper trigger">
+    <div class="ocean"></div>
     <div class="inner">
       <div class="block with-image">
         {#if isClient}
@@ -173,6 +189,20 @@
 
   <section class="even purple trigger">
     <div class="inner">
+      {#if isClient}
+        <div class="white-drip">
+          <LottiePlayer
+            src="/lottie/druppel.json"
+            autoplay={true}
+            loop={true}
+            controls={false}
+            renderer="svg"
+            background="transparent"
+            height={90}
+            width={270}
+            controlsLayout />
+        </div>
+      {/if}
       <div class="block with-image">
         {#if isClient}
           <div class="lottie">
@@ -409,7 +439,7 @@
           align-items: center;
           justify-content: center;
           padding: 0.125rem 0.5rem;
-          border: 1px solid $purple;
+          border: 1px solid $black;
           border-radius: 5px;
           font-size: 13px;
           font-weight: 300;
@@ -458,6 +488,16 @@
     &.purple {
       background: $purple;
       color: white;
+
+      .white-drip {
+        position: absolute;
+        top: -2px;
+        right: 0;
+        pointer-events: none;
+        :global(svg path) {
+          fill: white;
+        }
+      }
       h2 {
         color: white;
       }
@@ -469,6 +509,42 @@
           border-color: white;
         }
       }
+    }
+  }
+
+  .ocean-wrapper {
+    position: relative;
+  }
+
+  .ocean {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    background: $purple;
+    top: -5px;
+  }
+
+  :global(.wave) {
+    background: #ffffff;
+    display: inline-block;
+    height: 60%;
+    width: 10px;
+    position: absolute;
+    -webkit-animation-name: dostuff;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transition-timing-function: ease-in-out;
+  }
+
+  @-webkit-keyframes dostuff {
+    0% {
+      height: 60%;
+    }
+    50% {
+      height: 40%;
+    }
+    100% {
+      height: 60%;
     }
   }
 </style>
