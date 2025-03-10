@@ -309,8 +309,8 @@
     position: relative;
 
     @include small {
-      min-height: 400px;
-      padding-top: 4rem;
+      min-height: 450px;
+      padding-top: 6rem;
     }
 
     @keyframes hover-me {
