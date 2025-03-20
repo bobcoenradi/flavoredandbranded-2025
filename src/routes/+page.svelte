@@ -14,8 +14,38 @@
 
   let element;
 
+  let showPreloader = true;
+  let fadeOut = false;
+
+  let lottieRef: LottiePlayer | null = null;
+
+  function startFadeOut() {
+    // Wait 3 seconds after Lottie starts playing, then fade out
+    setTimeout(() => {
+      fadeOut = true;
+    }, 4000);
+
+    // After another 1 second, hide the preloader completely
+    setTimeout(() => {
+      showPreloader = false;
+    }, 5000);
+  }
+
   onMount(() => {
     isClient = true;
+
+    // Ensure Lottie has loaded and started playing
+    const checkLottieLoaded = () => {
+      if (lottieRef && lottieRef.getLottie()) {
+        console.log('Lottie animation has loaded!');
+        startFadeOut();
+      } else {
+        console.log('Lottie not ready, retrying...');
+        setTimeout(checkLottieLoaded, 100); // Retry every 100ms until it loads
+      }
+    };
+
+    checkLottieLoaded(); // Start checking immediately
 
     new Glide('.glide', {
       type: 'carousel',
@@ -43,6 +73,26 @@
   <title>Flavored and Branded</title>
   <meta name="description" content="" />
 </svelte:head>
+
+{#if showPreloader}
+  <div class="preloader" class:fade-out={fadeOut}>
+    {#if isClient}
+      <div class="lottie">
+        <LottiePlayer
+          bind:this={lottieRef}
+          src="/lottie/logo.json"
+          autoplay={true}
+          loop={false}
+          controls={false}
+          renderer="svg"
+          background="transparent"
+          height={270}
+          width={450}
+          controlsLayout />
+      </div>
+    {/if}
+  </div>
+{/if}
 
 <div class="container">
   <section class="hero trigger" data-color-from="#fff">
@@ -609,6 +659,26 @@
         margin: 2rem auto;
         display: inline-block;
       }
+    }
+  }
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $purple;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 9999;
+    transition: 1000ms ease-in-out opacity;
+    opacity: 1;
+    &.fade-out {
+      opacity: 0;
     }
   }
 </style>

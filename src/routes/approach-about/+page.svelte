@@ -38,8 +38,9 @@
   <section class="hero trigger">
     <div class="inner">
       <h1>
-        We are a concept development and branding agency specializing in hospitality and the F&B
-        sector. Read more about us and our approach below, and let's rendez-vous!
+        We develop concepts and branding, specializing in hospitality and the F&B sector, helping
+        you translate your vision into a brand. Read more about us and our approach below, and let's
+        rendezvous!
       </h1>
       <svg viewBox="0 0 68 33" class="chevron-down">
         <path
@@ -68,15 +69,14 @@
       <div class="block">
         <h2>Our approach</h2>
         <p>
-          We believe that every brand has a unique story to tell. Our approach is to uncover that
-          story and bring it to life through a combination of strategy, design, and creativity. We
-          craft a tailored plan to help your brand stand out and connect with your audience.
+          We believe every brand has a unique story to tell. Our goal is to uncover that story and
+          bring it to life through a mix of strategy, design, and creativity. We create a tailored
+          plan to help your brand stand out and forge strong connections with your audience.
         </p>
         <p>
-          Hospitality drives everything we do, shaping concepts, branding, and design that meet
-          guest needs. It’s more than a warm welcome and a clean table; it’s about consistency,
-          meaningful connections, and attention to detail. We turn this into unique concepts, strong
-          branding, and thoughtful design.
+          Hospitality is at the heart of everything we do. It shapes the concepts, branding, and
+          design that meet the needs of your guests. It's not just about a warm welcome or a clean
+          table; it's about consistency, meaningful connections, and attention to detail.
         </p>
       </div>
       <div class="block with-image">
@@ -116,11 +116,13 @@
       <div class="block">
         <h2>Roots in Hospitality</h2>
         <p>
-          With our background in hospitality and co-founding several F&B concepts, we don’t just
-          think big; we think real. We know the industry inside out, from the creative spark to the
-          operational and commercial side of things. That’s why we craft concepts that aren’t just
-          inspiring but actually work—concepts that excite guests, make business sense, and set the
-          stage for branding that feels just right.
+          With a background in hospitality and co-founding several F&B concepts, we don't just think
+          big; we think real. We know the industry inside out, from the creative spark to the
+          operational and commercial side of things.
+        </p>
+        <p>
+          That's why we craft concepts that aren't just inspiring but actually work. Concepts that
+          excite guests, make business sense, and set the stage for branding that feels just right.
         </p>
       </div>
     </div>
@@ -131,15 +133,18 @@
       <div class="block">
         <h2>How it all started</h2>
         <p>
-          My name is Sjo, I started as a creative graduate in art direction and concept, became a
-          hospitality entrepreneur a few years later and finally returned to my roots driven by a
-          passion for branding, concept, and design.
+          My name is Sjo. I started as a creative graduate in art direction and concept, became a
+          hospitality entrepreneur a few years later, and eventually returned to my roots, driven by
+          a passion for branding, concept, and design.
         </p>
         <p>
-          The experience of co-founding several F&B concepts and the need to create is what got me
-          started up Flavored and Branded.
+          The experience of co-founding several F&B concepts and the need to create is what led me
+          to start Flavored and Branded.
         </p>
-        <p>Together with others specialists, we create concepts and build flavorful branding.</p>
+        <p>
+          Together with our trusted partners, each an expert in their field, we create concepts and
+          build flavorful branding.
+        </p>
       </div>
       <div class="block with-image">
         <img src="/img/sjo.jpg" alt="Sjo Baggen" class="sjo" />

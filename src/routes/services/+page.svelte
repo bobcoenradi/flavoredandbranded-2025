@@ -67,20 +67,22 @@
       <div class="block">
         <h2>Concepting</h2>
         <p>
-          We call it the mise en place. Your concept is the foundation of your business. It all
-          starts with a story that makes sense in every way. We begin with an intro meeting to get
-          to the core of the idea, analyze the market, develop the name, create a positioning
-          statement, tie up all loose ends, and ensure your concept is solid and ready to be
-          translated into branding. Here, we define the framework for the next phase: branding.
+          We call it the mise en place, laying the foundation for your business. It all starts with
+          a story that makes sense in every way.
         </p>
         <p>
-          In short, we create and translate unique ideas into concepts, from the positioning
-          statement to the perfect name that sets the stage for a hospitality venue's identity and
-          vibe.
+          Through an intro meeting, we dive deep into your idea, analyze the market, develop the
+          perfect name, craft a positioning statement, and ensure every detail is aligned. The
+          result? A rock-solid concept, ready to be translated into branding.
         </p>
+        <p>
+          From a compelling positioning statement to a name that defines your venue’s identity and
+          vibe, we create and shape unique ideas into hospitality concepts that stand out.
+        </p>
+
         <div class="tags">
           <span>Positioning Statement</span>
-          <span>Concept Description</span>
+          <span>Concept</span>
           <span>Key Message</span>
           <span>Tagline</span>
           <span>The Motto</span>
@@ -124,14 +126,13 @@
       <div class="block">
         <h2>Branding</h2>
         <p>
-          This is the actual cooking. Here, we translate the foundation and story into a verbal and
-          visual identity. Many people describe this as the fun part—things become concrete, and we
-          add DNA to the concept.
+          This is where the real cooking begins. Many describe it as the fun part. We bring your
+          concept to life with a strong verbal and visual identity. The foundation and story take
+          shape, adding DNA to your brand.
         </p>
         <p>
-          A visual and verbal translation of the concept into a brand identity. From brand values
-          and tone of voice to logos, colors, patterns, and illustrations—all bundled into a brand
-          guide, ready to make noise and stand out!
+          From brand values and tone of voice to logos, colors, patterns, and illustrations,
+          everything comes together in a brand guide, ready to make noise and stand out!
         </p>
         <div class="tags">
           <span>Logo</span>
@@ -150,23 +151,21 @@
       <div class="block">
         <h2>Designing</h2>
         <p>
-          This is the finishing touch. Here, we plate all the ingredients and flavors from the
-          branding phase onto the right dish, add some extra spice, and implement it into your
-          venue.
+          The finishing touch. This is where we plate all the ingredients from the branding phase
+          onto the right dish, add the final spice, and implement it into your venue.
         </p>
         <p>
-          We translate the branding into all desired forms of collateral and print materials and
-          ensure it is seamlessly integrated into your venue. We design and build websites, create
-          packaging, menus, merchandise, and all other branding elements to bring your concept to
-          life.
+          From print materials and collateral to packaging, menus, and merchandise, we ensure every
+          branding element is seamlessly integrated. Need a website? We design and build it. Every
+          detail works together to bring your concept to life.
         </p>
         <div class="tags">
-          <span>Menu's</span>
+          <span>Menus</span>
           <span>Website</span>
           <span>Packaging</span>
           <span>Merchandise</span>
-          <span>Staff clothing</span>
-          <span>Window signing</span>
+          <span>Staff Clothing</span>
+          <span>Signing</span>
           <span>Social Media Templates</span>
         </div>
       </div>
@@ -219,17 +218,16 @@
       </div>
       <div class="block">
         <h2>After Care</h2>
-        <p>Think of it as the dessert, the cherry on top—essential to complete the experience.</p>
+        <p>Think of it as the dessert, the cherry on top, essential to complete the experience.</p>
         <p>
           Concepts and branding evolve and sometimes need maintenance. We conduct brand and concept
-          audits to ensure everything we do and communicate aligns with our original vision, making
-          adjustments and providing ongoing upkeep.
+          audits to ensure everything we do and communicate aligns with the original vision, making
+          adjustments and providing ongoing upkeep to keep things fresh and on point.
         </p>
         <div class="tags">
-          <span>Brand audits</span>
-          <span>Analyse</span>
+          <span>Brand Audits</span>
+          <span>Analyses</span>
           <span>Campaigns</span>
-          <span>Maintenance</span>
         </div>
       </div>
     </div>
